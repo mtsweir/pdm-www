@@ -92,7 +92,10 @@ module.exports = function(grunt) {
 		cssmin: {
 			combine: {
 				files: {
-					'css/min/pdm-core.css': ['css/root.css','css/base.css'],
+					'css/min/pdm-core.css': [
+						'css/root.css',
+						'css/base.css'
+					],
 					'css/min/pdm-site.css': [
 						'css/component/*.css',
 						'css/layout/*.css',
