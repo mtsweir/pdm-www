@@ -1,11 +1,11 @@
 {
-	"name": "Podium Physiotherapy",
+	"name": "podium_physiotherapy",
 	"description": "CSS/JS build system",
 	"version": "1.0.0",
 	"homepage": "https://www.podiumphysio.co.nz",
 	"license": "MIT",
 	"author": {
-		"name": "Max Weir",
+		"name": "Max Weir"
 	},
 	"repository": {
 		"type": "git",
