@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 			dist: {
 				src: [
 					'css/**/*.css',
-					'!css/elementor/*.css', // Exclude Elementor from processing
+					'!css/elementor/*.css', // Exclude Elementor css from processing
 				],
 			}
 		},
@@ -21,11 +21,11 @@ module.exports = function(grunt) {
 				livereload: true,
 			},
 			css: {
-				files: ['scss/**/*.scss'],
+				files: ['src/scss/**/*.scss'],
 				tasks: ['sass-task', 'postcss'],
 			},
 			js: {
-				files: ['js/pushy.js'],
+				files: ['src/scripts/lib/pushy.js'],
 				tasks: ['js-task'],
 			},
 		},
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 				},
 				dist: {
 					src: [
-								'js/pushy.js'
+								'src/scripts/lib/pushy.js'
 								],
 					dest: 'js/pushy.min.js',
 				},
@@ -55,37 +55,37 @@ module.exports = function(grunt) {
 				},
 				files: {
 					// Elementor, demo usage only
-					'css/elementor/hello.css': 'scss/elementor/hello.scss',
-					'css/elementor/theme.css': 'scss/elementor/theme.scss',
-					'css/elementor/frontend.css': 'scss/elementor/frontend.scss',
+					'css/elementor/hello.css': 'src/scss/elementor/hello.scss',
+					'css/elementor/theme.css': 'src/scss/elementor/theme.scss',
+					'css/elementor/frontend.css': 'src/scss/elementor/frontend.scss',
 					// Core
-					'css/base.css': 'scss/base.scss',
-					'css/root.css': 'scss/root.scss',
+					'css/base.css': 'src/scss/base.scss',
+					'css/root.css': 'src/scss/root.scss',
 					// Component
-					'css/component/accordion.css': 'scss/component/accordion.scss',
-					'css/component/breadcrumb.css': 'scss/component/breadcrumb.scss',
-					'css/component/button.css': 'scss/component/button.scss',
-					'css/component/card-link.css': 'scss/component/card-link.scss',
-					'css/component/card-list.css': 'scss/component/card-list.scss',
-					'css/component/components.css': 'scss/component/components.scss',
-					'css/component/link-cta.css': 'scss/component/link-cta.scss',
+					'css/component/accordion.css': 'src/scss/component/accordion.scss',
+					'css/component/breadcrumb.css': 'src/scss/component/breadcrumb.scss',
+					'css/component/button.css': 'src/scss/component/button.scss',
+					'css/component/card-link.css': 'src/scss/component/card-link.scss',
+					'css/component/card-list.css': 'src/scss/component/card-list.scss',
+					'css/component/components.css': 'src/scss/component/components.scss',
+					'css/component/link-cta.css': 'src/scss/component/link-cta.scss',
 					// Section
-					'css/section/home-hero.css': 'scss/section/home-hero.scss',
-					'css/section/hero-inverse.css': 'scss/section/hero-inverse.scss',
-					'css/section/services.css': 'scss/section/services.scss',
+					'css/section/home-hero.css': 'src/scss/section/home-hero.scss',
+					'css/section/hero-inverse.css': 'src/scss/section/hero-inverse.scss',
+					'css/section/services.css': 'src/scss/section/services.scss',
 					// Layout
-					'css/layout/site-header.css': 'scss/layout/site-header.scss',
-					'css/layout/form.css': 'scss/layout/form.scss',
-					'css/layout/grid.css': 'scss/layout/grid.scss',
+					'css/layout/site-header.css': 'src/scss/layout/site-header.scss',
+					'css/layout/form.css': 'src/scss/layout/form.scss',
+					'css/layout/grid.css': 'src/scss/layout/grid.scss',
 					// Utility
-					'css/utility/layout.css': 'scss/utility/layout.scss',
-					'css/utility/misc.css': 'scss/utility/misc.scss',
-					'css/utility/text.css': 'scss/utility/text.scss',
-					'css/utility/visually-hidden.css': 'scss/utility/visually-hidden.scss',
-					'css/utility/width.css': 'scss/utility/width.scss',
-					'css/utility/wysiwyg.css': 'scss/utility/wysiwyg.scss',
+					'css/utility/layout.css': 'src/scss/utility/layout.scss',
+					'css/utility/misc.css': 'src/scss/utility/misc.scss',
+					'css/utility/text.css': 'src/scss/utility/text.scss',
+					'css/utility/visually-hidden.css': 'src/scss/utility/visually-hidden.scss',
+					'css/utility/width.css': 'src/scss/utility/width.scss',
+					'css/utility/wysiwyg.css': 'src/scss/utility/wysiwyg.scss',
 					// Vendor
-					'css/vendor/pushy.css': 'scss/vendor/pushy.scss',
+					'css/vendor/pushy.css': 'src/scss/vendor/pushy.scss',
 				}
 			}
 		},
