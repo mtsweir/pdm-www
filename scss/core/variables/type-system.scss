@@ -1,0 +1,26 @@
+//
+// Typography
+//
+
+
+// Elementor Defaults
+// These are defined in Elementor global typography.
+
+$primary-font-family:   --e-global-typography-primary-font-family; // Sora
+$secondary-font-family: --e-global-typography-secondary-font-family; // Red Hat Display
+
+$primary-font-weight:   --e-global-typography-primary-font-weight; // 400
+$secondary-font-weight: --e-global-typography-secondary-font-weight; // 900
+
+
+// Font maps
+
+$elementor-font-map: (
+	$primary-font-family:   "Sora",
+	$secondary-font-family: "Red Hat Display"
+) !default;
+
+$elementor-font-weight-map: (
+	$primary-font-weight: 400,
+	$secondary-font-weight: 900
+) !default;

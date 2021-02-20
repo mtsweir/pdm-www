@@ -1,0 +1,42 @@
+@import "./../core/index";
+
+
+// Box shadow
+
+.u-bx-shadow-raised {
+	box-shadow: $box-shadow-raised rgba(varRGB($color-secondary), 0.25);
+}
+
+
+@include breakpointEM($breakpoint-em-sm, 'max') {
+	.u-img-edge-fit .elementor-image {
+			margin-left: -2em;
+			margin-right: -2em;
+	}
+}
+
+
+.u-bg-dark .u-link {
+	color: var($color-white);
+	border-bottom-color: rgba(varRGB($color-white), 0.25);
+
+
+	&:focus,
+	&:hover {
+		color: var($color-white);
+		border-bottom-color: var($color-white);
+		box-shadow: 0 4px 0 rgb(varRGB($color-white) / 25%);
+	}
+}
+
+.u-bg-dark p a {
+	color: var($color-white);
+	border-bottom-color: rgba(varRGB($color-white), 0.25);
+
+	&:focus,
+	&:hover {
+		color: var($color-white);
+		border-bottom-color: var($color-white);
+		box-shadow: 0 4px 0 rgb(varRGB($color-white) / 25%);
+	}
+}

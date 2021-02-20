@@ -1,0 +1,29 @@
+@import "./../core/index";
+
+
+.has-gutters {
+	margin-left: -1.2em;
+	//margin-bottom: -1.2em;
+}
+
+// .has-gutters--cards {
+// 	margin-bottom: -3em;
+
+// 	@include breakpoint($breakpoint-medium, 'min') {
+// 		margin-bottom: -5em;
+// 	}
+// }
+
+
+.has-gutter {
+	padding-left: 1.2em;
+	padding-bottom: 1.2em;
+}
+
+// .has-gutter--cards {
+// 	padding-bottom: 3em;
+
+// 	@include breakpoint($breakpoint-medium, 'min') {
+// 		padding-bottom: 5em;
+// 	}
+// }

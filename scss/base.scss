@@ -1,0 +1,27 @@
+//
+// Reset
+//
+
+@import "./core/index";
+
+
+html ::selection {
+	background: var($color-primary);
+	color: var($color-white);
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+svg {
+	overflow: hidden;
+	color: inherit;
+	fill: currentColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var($font-secondary);
+	font-weight: var($secondary-font-weight);
+}

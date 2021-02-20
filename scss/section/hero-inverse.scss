@@ -1,0 +1,32 @@
+@import "./../core/index";
+
+
+// Hero wrapper
+// ----------------------------------------------------------------
+
+.pdm-section-home-hero--inverse {
+	//background-color: var($color-bg-secondary);
+	background: linear-gradient(to left, var($color-white) 50%, #000 50%);
+
+	@include breakpoint($breakpoint-large, 'min') {
+		&::before {
+			background: linear-gradient(90deg, var($color-secondary) 50%, rgba(varRGB($color-secondary), 0) 50%);
+		}
+	}
+}
+
+
+// Hero image
+// ----------------------------------------------------------------
+
+.pdm-home-hero-image--inverse {
+	.elementor-column-wrap {
+		&::before {
+			background: linear-gradient(0, var($color-secondary), rgba(varRGB($color-secondary), 0) 50%);
+
+			@include breakpoint($breakpoint-medium, 'min') {
+				background: linear-gradient(90deg, var($color-secondary), rgba(varRGB($color-secondary), 0) 30em);
+			}
+		}
+	}
+}

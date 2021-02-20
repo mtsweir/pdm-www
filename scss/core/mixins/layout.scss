@@ -1,0 +1,133 @@
+//
+// Layout
+//
+
+
+// Custom Breakpoints
+//
+// This mixin allows you to set: min-width, max-width and (min-max width) breakpoints
+// rules using our core [Breakpoint widths] variables. This is ideal when you are
+// developing and need to set a breakpoint rule for a specific use case.
+//
+// min-width example:
+//
+// @include breakpoint($width-small, 'min') {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// Output:
+//
+// @media (min-width: 480px) {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// max-width example:
+//
+// @include breakpoint($width-small, 'max') {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// Output:
+//
+// @media (max-width: 479px) {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// min & max width example:
+// @include breakpoint($width-small, $width-large) {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+// Output:
+// @media (min-width: 480px) and (max-width: 1023px) {
+// 	.foo {
+// 		foo: bar;
+// 	}
+// }
+//
+
+@mixin breakpoint($breakpoint, $type) {
+	@if $type == 'min' {
+		// Output media query based on min-width value
+		@media (min-width: $breakpoint + px) {
+			@content;
+		}
+	}
+	@else if $type == 'max' {
+		// Output media query based on max-width value
+		@media (max-width: ($breakpoint - 1) + px) {
+			@content;
+		}
+	}
+	@else if (type-of($type) == number) {
+		// Output media query based on both min-width and max-width
+		@media (min-width: $breakpoint + px) and (max-width: ($type - 1) + px) {
+			@content;
+		}
+	}
+	@else {
+		@error "Invalid value for parameter $type: '" + $type + "'. Expecting 'min', 'max', or secondary breakpoint value.";
+	}
+}
+
+
+// Em based breakpoints
+
+@mixin breakpointEM($breakpoint, $type) {
+	@if $type == 'min' {
+		// Output media query based on min-width value
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	}
+
+	@else if $type == 'max' {
+		// Output media query based on max-width value
+		@media (max-width: ($breakpoint - 1 / $browser-default)) {
+			@content;
+		}
+	}
+
+	@else if (type-of($type) == number) {
+		// Output media query based on both min-width and max-width
+		@media (min-width: $breakpoint) and (max-width: ($type - 1 / $browser-default)) {
+			@content;
+		}
+	}
+
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}
+
+
+// Menu Transition
+
+@mixin menu-transition {	
+	-webkit-transition: 
+	0.6s max-height cubic-bezier($transition-cubic-bezier),
+	0.6s padding cubic-bezier($transition-cubic-bezier),
+	0.2s top, 
+	0.1s visibility 0.2s, 
+	0.2s opacity 0.2s, 
+	0.2s transform 0.2s;
+
+	transition: 
+	0.6s max-height cubic-bezier($transition-cubic-bezier),
+	0.6s padding cubic-bezier($transition-cubic-bezier), 
+	0.2s top, 
+	0.1s visibility 0.2s, 
+	0.2s opacity 0.2s, 
+	0.2s transform 0.2s;
+}

@@ -1,0 +1,40 @@
+//
+// Layout
+//
+
+
+// Elementor breakpoints as set in global settings
+
+$breakpoint-small:   500 !default;
+$breakpoint-medium:  700 !default;
+$breakpoint-large:  1000 !default;
+$breakpoint-max:    1400 !default;
+
+
+// Em based breakpoints
+
+// This $browser-default is required for use within our custom
+// media-query mixin for resposive layout design. 16px represents
+// the browsers default font size and is used to calculate an em based
+// max-width breakpoint size.
+
+$browser-default: 16 !default;
+
+$breakpoint-em-sm:   31.25em !default; // 500 Small screen, phone
+$breakpoint-em-md:   43.75em !default; // 700 Medium screen, tablet
+$breakpoint-em-lg:    62.5em !default; // 1000 Large screen, desktop
+$breakpoint-em-max:   87.5em !default; // 1400 Elementor max width
+$breakpoint-em-widest: 100em !default; // 1600 Extra wide, large desktop
+
+
+// Spacing
+
+$spacing-1: 4px;
+$spacing-2: 8px;
+$spacing-3: 12px;
+$spacing-4: 16px;
+$spacing-5: 20px;
+$spacing-6: 24px;
+$spacing-7: 32px;
+$spacing-8: 40px;
+$spacing-9: 48px;

@@ -1,0 +1,20 @@
+//
+// Root
+//
+
+@import "./core/index";
+
+
+:root {
+	@each $name, $hex in $elementor-colour-map {
+		@include defineColorRGB(#{$name}, $hex);
+	}
+
+	@each $font, $name in $elementor-font-map {
+		#{$font}: $name;
+	}
+
+	@each $font, $weight in $elementor-font-weight-map {
+		#{$font}: $weight;
+	}
+}

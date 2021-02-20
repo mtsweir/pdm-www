@@ -1,0 +1,127 @@
+@import "./../core/index";
+
+
+// Hero wrapper
+// ----------------------------------------------------------------
+
+.pdm-section-home-hero {
+	//background-color: var($color-bg-sand);
+	background: var($color-bg-sand);
+
+	@include breakpoint($breakpoint-medium, 'min') {
+		background: linear-gradient(to left, var($color-bg-white) 50%, var($color-bg-sand) 50%);
+	}
+
+	.elementor-column {
+		position: relative;
+	}
+
+	@include breakpoint($breakpoint-large, 'min') {
+		.elementor-row {
+			min-height: 75vh;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(90deg, var($color-sand) 50%, rgba(0, 0, 0, 0) 50%);
+			z-index: -1;
+		}
+	}
+}
+
+
+// Hero content
+// ----------------------------------------------------------------
+
+.pdm-home-hero-type {
+	order: 2;
+	position: relative;
+	z-index: 1;
+	padding: 4em 2em;
+
+	.elementor-column-wrap {
+		max-width: 40em;
+	}
+
+	@include breakpoint($breakpoint-medium, 'min') {
+		order:  unset;
+		padding-top: 5em;
+		padding-bottom: 5em;
+		padding-left: 4em;
+	}
+
+	@include breakpoint($breakpoint-large, 'min') {
+		order:  unset;
+		padding-left: 6em;
+		padding-right: 0;
+	}
+
+	@include breakpointEM($breakpoint-em-widest, 'min') {
+		padding-left: 0;
+	}
+}
+
+
+// Hero image
+// ----------------------------------------------------------------
+
+.pdm-home-hero-image {
+	// height: 24em;
+	margin-bottom: -8em;
+	background: var($color-bg-sand);
+
+	@include breakpoint($breakpoint-medium, 'min') {
+		margin-bottom: 0;
+	}
+
+	// @include breakpoint($breakpoint-medium, 'min') {
+	// 	height: 35em;
+	// }
+
+	// @include breakpoint($breakpoint-large, 'min') {
+	// 	height: auto;
+	// 	min-height: 75vh;
+	// }
+
+	.elementor-column-wrap {
+		height: 24em;
+		background-position: center;
+		background-size: cover;
+		//background-color: rgba(varRGB($color-sand), 0.7);
+		background-repeat: no-repeat;
+
+		@include breakpoint($breakpoint-medium, 'min') {
+			//height: 35em;
+			height: auto;
+		}
+
+		@include breakpoint($breakpoint-large, 'min') {
+			width: auto;
+			height: auto;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: -10em;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(0, var($color-sand), rgba(varRGB($color-sand), 0) 50%);
+
+			@include breakpoint($breakpoint-medium, 'min') {
+				background: linear-gradient(90deg, var($color-sand), rgba(varRGB($color-sand), 0) 30em);
+			}
+		}
+	}
+}

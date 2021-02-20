@@ -1,0 +1,82 @@
+@import "./../core/index";
+
+
+// Text alignment
+
+.u-text-left {
+  text-align: left;
+}
+
+@include breakpoint($breakpoint-medium, 'min') {
+	.u-text-right-md {
+		text-align: right;
+	}
+}
+
+@include breakpoint($breakpoint-large, 'min') {
+	.u-text-right-lg {
+		text-align: right;
+	}
+}
+
+
+// Link
+
+.u-link,
+p a {
+	display: inline-block;
+	outline: 0;
+	border-bottom: 2px solid #2E3238;
+	color: var($color-secondary);
+	transition: 0.15s border-color, 0.15s color, 0.15s box-shadow;
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: 0;
+    color: var($color-primary);
+    border-color: var($color-primary);
+		box-shadow: 0 4px 0 rgba(varRGB($color-primary), 0.25);
+	}
+}
+
+
+// Heading with top bar accent
+
+.pdm-heading-bar-top {
+	&::before {
+		content: "";
+		width: 8em;
+		margin-bottom: 2em;
+		display: inline-block;
+		border-top: 5px solid var($color-secondary);
+
+		@include breakpoint($breakpoint-medium, 'min') {
+			width: 12em;
+			margin-bottom: 2.5em;
+		}
+	}
+
+	&.pdm-heading-bar-top--white {
+		&::before {
+			border-color: var($color-white);	
+		}
+	}
+}
+
+
+// Section heading with top bar accent
+
+.headings--page--with-dec:before {
+	border-top: 5px solid;
+	width: 8em;
+	content: "";
+	margin-bottom: 2em;
+	display: inline-block;
+		@include breakpoint($breakpoint-medium, 'min') {
+			.headings--page--with-dec:before {
+				width: 12em;
+				margin-bottom: 2.5em;
+			}
+		}
+}

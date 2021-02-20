@@ -1,0 +1,18 @@
+@import "./../core/index";
+
+
+.pdm-card-link {
+	.elementor-widget-container {
+		border-radius: $border-radius;
+		transition: 0.4s box-shadow cubic-bezier($transition-cubic-bezier),
+		0.4s transform cubic-bezier($transition-cubic-bezier);
+	}
+
+	@include breakpoint($breakpoint-large, 'min') {
+		&:focus .elementor-widget-container,
+		&:hover .elementor-widget-container {
+			transform: translateY(-5px);
+			box-shadow: $box-shadow-raised rgba(varRGB($color-secondary), 0.25);
+		}
+	}
+}

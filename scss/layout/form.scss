@@ -1,0 +1,13 @@
+@import "./../core/index";
+
+
+.elementor-message {
+	display: inline-block;
+	margin: 1em 0 0;
+	padding: 0.5em 1em;
+	background-color: var($color-bg-pink);
+	border-radius: $border-radius;
+	color: var($color-white);
+	font-size: 0.875em;
+}
+

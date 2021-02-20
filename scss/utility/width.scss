@@ -1,0 +1,29 @@
+@import "./../core/index";
+
+
+@include breakpointEM($breakpoint-em-md, 'min') {
+	.mw-45em {
+		max-width: 45em
+	}
+
+	.mw-40em {
+		max-width: 40em
+	}
+
+	.mw-32em {
+		max-width: 32em
+	}
+
+	.mw-30em {
+		max-width: 30em
+	}
+
+	.mw-20em {
+		max-width: 20em
+	}
+}
+
+.mx-auto {
+	margin-right: auto;
+	margin-left: auto
+}

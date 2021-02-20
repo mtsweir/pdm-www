@@ -1,0 +1,49 @@
+@import "./../core/index";
+
+
+.pdm-button--teal {
+	.elementor-button {
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 0 5px rgba(varRGB($color-primary), 0.25);
+		}
+	}
+}
+
+.pdm-button--white {
+	.elementor-button {
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 0 5px rgba(varRGB($color-white), 0.25);
+		}
+	}
+}
+
+.pdm-button--grey {
+	.elementor-button {
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 0 5px rgba(varRGB($color-white), 0.08);
+		}
+	}
+}
+
+
+.pdm-button--cta svg {
+	width: 14px;
+	height: 14px;
+
+	&.button--white svg {
+		color: var($color-primary);
+	}
+
+	&.button--arrow svg {
+		width: 24px;
+		height: 14px;
+	}
+
+	&.button--arrow-extended svg {
+		width: 32px;
+		height: 14px;
+	}
+}

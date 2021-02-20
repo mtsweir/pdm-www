@@ -1,0 +1,32 @@
+//
+// Colours
+//
+// Colour variables based off our core [colour-system].
+
+@import "./colour-system";
+
+
+// Elementor defaults
+
+$color-primary:   $primary !default;
+$color-secondary: $secondary !default;
+$color-text:      $text !default;
+$color-accent:    $accent !default;
+
+
+// Elementor custom
+
+$color-white:      $white !default;
+$color-e-grey-100: $grey-100 !default;
+$color-sand:       $sand !default;
+
+
+// Background
+
+$color-bg-primary:   $primary !default;
+$color-bg-secondary: $secondary !default;
+$color-bg-accent:    $accent !default;
+$color-bg-white:     $white !default;
+$color-bg-grey-100:  $grey-100 !default;
+$color-bg-sand:      $sand !default;
+$color-bg-pink:      $pink !default;

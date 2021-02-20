@@ -1,0 +1,15 @@
+//
+// Root
+//
+
+
+%root {
+	@include defineColorRGB($color-white, #fff);
+
+	// Typography
+	// --e-global-typography-primary-font-family: #{$font-body};
+	// --e-global-typography-primary-font-weight: #{$font-weight-normal};
+
+	// --e-global-typography-secondary-font-family: #{$font-heading};
+	// --e-global-typography-secondary-font-weight: #{$font-weight-bold};
+}

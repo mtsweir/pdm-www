@@ -1,0 +1,48 @@
+@import "./../core/index";
+
+
+.pdm-team-card {
+	.elementor-image-box-img {
+		img {
+			display: block;
+		}
+	}
+	.elementor-image-box-title {
+		margin: 0 0 $spacing-2;
+		font-family: var($font-primary);
+		font-size: $font-primary;
+	}
+
+	.elementor-image-box-description {
+		color: var($color-text);
+		font-size: $font-size-small-1;
+	}
+}
+
+
+.pdm-button--cta {
+	svg {
+		width: 14px;
+		height: 14px;
+	}
+
+	&.button--white {
+		svg {
+			color: var($color-primary);
+		}
+	}
+
+	&.button--arrow {
+		svg {
+			width: 24px;
+			height: 14px;
+		}
+	}
+
+	&.button--arrow-extended {
+		svg {
+			width: 32px;
+			height: 14px;
+		}
+	}
+}

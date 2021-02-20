@@ -1,0 +1,44 @@
+@import "./../core/index";
+
+
+.pdm-services-cta-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.pdm-services-cta-bar-detail {
+	display: none;
+
+	@include breakpoint($breakpoint-medium, 'min') {
+		display: block;
+	}
+}
+
+.pdm-services-cta-bar-buttons {
+	display: flex;
+	width: 100%;
+
+	@include breakpoint($breakpoint-medium, 'min') {
+		width: auto;
+	}
+
+	.elementor-button {
+		width: 50%;
+	
+		&:first-child {
+			color: var($color-primary);
+			background-color: var($color-bg-white);
+			border-radius: 4px 0 0 4px;
+			box-shadow: 0 0 0 1px var($color-primary) inset;
+		}
+
+		&:last-child {
+			border-radius: 0 4px 4px 0;
+		}
+
+		@include breakpoint($breakpoint-medium, 'min') {
+			width: auto;
+		}
+	}
+}

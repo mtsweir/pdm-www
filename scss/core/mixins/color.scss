@@ -1,0 +1,55 @@
+//
+// Colour
+//
+
+
+// Convert Hex colours to RGB,
+// This is so we can use the rgb values as opacity variants,
+// the rgb variants must be added to the site's main CSS file.
+//
+// Usage:
+//
+// :root {
+// 	@include defineColorRGB($color-white, #fff);
+// }
+//
+
+@mixin defineColorRGB($color-name, $value) {
+	$red: red($value);
+	$green: green($value);
+	$blue: blue($value);
+	#{$color-name}: $value; // return hex value
+	#{$color-name}-rgb: $red, $green, $blue; // return rgb of the hex
+}
+
+// Replace substring with another string,
+// credits: https://css-tricks.com/snippets/sass/str-replace-function/
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+	@if $index {
+			@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+	@return $string;
+}
+
+@function alpha($color, $opacity) {
+	$color: str-replace($color, 'var(');
+	$color: str-replace($color, ')');
+	@return rgba($color-r, $color-g, $color-b, $opacity);
+}
+
+
+// Reference colours, includes Elementor prefix
+
+@function varRGB($color-name) {
+  @return var(#{$color-name}-rgb);
+}
+
+
+// Resources
+//
+// https://stackoverflow.com/questions/40010597/how-do-i-apply-opacity-to-a-css-color-variable
+// https://codepen.io/jakealbaugh/post/css4-variables-and-sass
+// https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps
+// https://stackoverflow.com/questions/52603815/css-root-variables-and-sass-functions
+//

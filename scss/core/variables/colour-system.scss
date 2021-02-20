@@ -1,0 +1,45 @@
+//
+// Colour
+//
+
+
+// Elementor Defaults
+// These are defined in Elementor global colours.
+
+$primary:   --e-global-color-primary !default;   // #47b4b4
+$secondary: --e-global-color-secondary !default; // #2d2f2e
+$text:      --e-global-color-text !default;      // #2d2f2e
+$accent:    --e-global-color-accent !default;    // #ff832b
+
+
+// Elementor Custom
+// These are also defined in Elementor global colours.
+
+// Greys
+
+$grey-100: --e-global-color-bb19915 !default; // #f3f4f3 - lightest grey
+$grey-200: --e-global-color-e5c7b0d !default; // #6B6C6B - medium grey
+
+
+// Custom
+
+$white: --e-global-color-ebca202 !default; // #fff
+$sand:  --e-global-color-4a10e79 !default; // #f1e9e5
+$pink:  --e-global-color-b9f5a71 !default; // #fc5185
+
+
+// Colour map
+//
+// Define the actual hex colour for each Elementor global colour,
+// these are then passed into the [defineColorRGB] mixin to generate
+// root level colour variables as hex and RGB variants.
+
+$elementor-colour-map: (
+	$primary: #40bac1,
+	$secondary: #333436,
+	$text: #333436,
+	$accent: #ff832b,
+	$sand: #f1e9e5,
+	$pink: #fc5185,
+	$white: #fff,
+) !default;
