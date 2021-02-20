@@ -1,0 +1,32 @@
+{
+	"name": "Podium Physiotherapy",
+	"description": "CSS/JS build system",
+	"version": "1.0.0",
+	"homepage": "https://www.podiumphysio.co.nz",
+	"license": "MIT",
+	"author": {
+		"name": "Max Weir",
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mtsweir/pdm-www.git"
+	},
+	"devDependencies": {
+		"@lodder/grunt-postcss": "^3.0.0",
+		"autoprefixer": "^10.2.1",
+		"grunt": "^1.3.0",
+		"grunt-contrib-concat": "^1.0.1",
+		"grunt-contrib-cssmin": "^4.0.0",
+		"grunt-contrib-sass": "^2.0.0",
+		"grunt-contrib-uglify": "^5.0.0",
+		"grunt-contrib-watch": "^1.1.0",
+		"grunt-postcss": "^0.9.0",
+		"postcss": "^8.2.4",
+		"postcss-scss": "^3.0.4"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"IE 10"
+	]
+}
