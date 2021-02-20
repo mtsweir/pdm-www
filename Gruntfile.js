@@ -105,6 +105,23 @@ module.exports = function(grunt) {
 					]
 				}
 			}
+		},
+		svgstore: {
+			options: {
+				// clean up all inline style attributes
+				cleanup : true,
+				// remove the <title> element
+				includeTitleElement : false,
+				// format the generated HTML
+				formatting : {
+					indent_size : 2
+				}
+			},
+				default: {
+					files: {
+					'defs.svg': ['src/svg/*.svg'],
+				},
+			},
 		}
 	});
 	
@@ -115,12 +132,17 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('@lodder/grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-svgstore');
 
 	// Default task(s).
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('js-task', ['concat', 'uglify']);
 	grunt.registerTask('sass-task', ['sass']);
 
+	// SVG defs build
+	grunt.registerTask('svg', ['svgstore']);
+
+	// Production task
 	grunt.registerTask('build', [
 		'concat',
 		'uglify',
