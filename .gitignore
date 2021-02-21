@@ -27,6 +27,7 @@ npm-debug.log
 # Editor
 .DS_Store
 .vscode
+podium-www.code-workspace
 
 # Dependency directory
 node_modules
